@@ -1,28 +1,24 @@
-## Micronaut 4.10.2 Documentation
+# Pricing API
 
-- [User Guide](https://docs.micronaut.io/4.10.2/guide/index.html)
-- [API Reference](https://docs.micronaut.io/4.10.2/api/index.html)
-- [Configuration Reference](https://docs.micronaut.io/4.10.2/guide/configurationreference.html)
-- [Micronaut Guides](https://guides.micronaut.io/index.html)
----
+A simple backend API for travel insurance pricing, inspired by SafetyWing's pricing model.
 
-- [Shadow Gradle Plugin](https://gradleup.com/shadow/)
-- [Micronaut Gradle Plugin documentation](https://micronaut-projects.github.io/micronaut-gradle-plugin/latest/)
-- [GraalVM Gradle Plugin documentation](https://graalvm.github.io/native-build-tools/latest/gradle-plugin.html)
-## Feature serialization-jackson documentation
+Built with Kotlin and Micronaut.
 
-- [Micronaut Serialization Jackson Core documentation](https://micronaut-projects.github.io/micronaut-serialization/latest/guide/)
+## What it does
 
+This API provides two endpoints:
 
-## Feature ksp documentation
+1. **GET /api/config** - Returns available age bands and extra coverages with prices
+2. **POST /api/quote** - Calculates the total price based on user selection
 
-- [Micronaut Kotlin Symbol Processing (KSP) documentation](https://docs.micronaut.io/latest/guide/#kotlin)
+## Tech Stack
 
-- [https://kotlinlang.org/docs/ksp-overview.html](https://kotlinlang.org/docs/ksp-overview.html)
+- Kotlin 1.9+
+- Micronaut 4.10.2
+- Gradle 8.14.3
+- JDK 21
 
+## Running locally
 
-## Feature micronaut-aot documentation
-
-- [Micronaut AOT documentation](https://micronaut-projects.github.io/micronaut-aot/latest/guide/)
-
-
+```bash
+./gradlew run
