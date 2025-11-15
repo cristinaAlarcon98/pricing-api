@@ -1,4 +1,6 @@
 package com.insurance.pricing.model
+import io.micronaut.serde.annotation.Serdeable
+
 
 enum class AgeBand(val label: String, val basePrice: Double) {
     UNDER_10("Age Under 10", 40.0),
@@ -12,33 +14,39 @@ enum class Extra(val label: String, val price: Double) {
     ADVENTURE_SPORTS("Adventure Sports", 10.0)
 }
 
+@Serdeable
 data class AgeBandDto(
     val id: String,
     val label: String,
     val basePrice: Double
 )
 
+@Serdeable
 data class ExtraDto(
     val id: String,
     val label: String,
     val price: Double
 )
 
+@Serdeable
 data class ConfigResponse(
     val ageBands: List<AgeBandDto>,
     val extras: List<ExtraDto>
 )
 
+@Serdeable
 data class QuoteRequest(
     val ageBandId: String,
     val extraIds: List<String> = emptyList()
 )
 
+@Serdeable
 data class ExtraItemDto(
     val id: String,
     val price: Double
 )
 
+@Serdeable
 data class QuoteResponse(
     val basePrice: Double,
     val extras: List<ExtraItemDto>,
