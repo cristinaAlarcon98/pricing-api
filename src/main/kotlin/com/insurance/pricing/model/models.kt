@@ -52,3 +52,10 @@ data class QuoteResponse(
     val extras: List<ExtraItemDto>,
     val total: Double
 )
+
+@Serdeable
+data class ErrorResponse(
+    val error: String,
+    val message: String,
+    val status: Int
+)
